@@ -107,9 +107,7 @@ def main():
     parser.add_argument("-r", "--uavsar", type=str, help="Specify the input UAVSAR radar file")
     parser.add_argument("-p", "--polarization", type=str, help="Specify the input UAVSAR polarization in UPPERCASE (i.e HHHV)")
     args = parser.parse_args()
-    print(args.input)
-    print(args.uavsar)
-    print(args.polarization)
+
     if '.txt' in str(args.input):
         pass
     else:
@@ -125,7 +123,6 @@ def main():
         print("SPECIFY UAVSAR IMAGE POLARIZATION (i.e. 'HHHV')")
         os._exit(1)
 
-    print(args)
     genHDRfromTXT(args.input, args.uavsar, args.polarization)
 
 
